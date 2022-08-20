@@ -1,0 +1,41 @@
+{
+    "people": 
+    [
+        {
+            "name": "Bruno",
+            "surname": "Radvoc",
+            "age": 45,
+            "profession": "Lawyer"
+        },
+        {
+            "name": "Nello",
+            "surname": "Policriti",
+            "age": 36,
+            "profession": "Programmer"
+        },
+        {
+            "name": "Maria",
+            "surname": "Lavazza",
+            "age": 25,
+            "profession": "Lawyer"
+        },
+        {
+            "name": "Marco",
+            "surname": "Polo",
+            "age": 55,
+            "profession": "Explorer"
+        },
+        {
+            "name": "Marco",
+            "surname": "Lazzari",
+            "age": 36,
+            "profession": "Student"
+        },
+        {
+            "name": "Roberto",
+            "surname": "Polo",
+            "age": 21,
+            "profession": "Programmer"
+        }
+    ]
+}
