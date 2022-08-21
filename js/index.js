@@ -15,7 +15,8 @@ function process(data) {
 
     for (const person of people) {
         console.log(person);
-        addPersonToTableFragment(person, docFrag);
+        const row = addPersonToTableFragment(person);
+        docFrag.append(row);
     }
 
     //people.forEach(person => addPersonToTableFragment(person, docFrag));
@@ -23,7 +24,7 @@ function process(data) {
     table.append(docFrag);
 }
 
-function addPersonToTableFragment(person, frag) {
+function addPersonToTableFragment(person) {
     const row = document.createElement("tr");
 
     for (const key in person) {
@@ -32,5 +33,5 @@ function addPersonToTableFragment(person, frag) {
         row.append(col);
     }
 
-    frag.append(row);
+    return row;
 }
