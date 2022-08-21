@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     console.log("Document Loaded");
 
     fetch("../json/contents.json")
@@ -8,24 +8,29 @@ document.addEventListener("DOMContentLoaded", function(){
         .then((data) => process(data));
 });
 
-function process(data){
+function process(data) {
     const people = data.people;
-    //console.log(people);
-    for(let i = 0; i < people.length; i++){
-        console.log(people[i]);
-        addPersonToTable(people[i], i+1);
+    const docFrag = document.createDocumentFragment();
+    const table = document.getElementById("Contents");
+
+    for (const person of people) {
+        console.log(person);
+        addPersonToTableFragment(person, docFrag);
     }
+
+    //people.forEach(person => addPersonToTableFragment(person, docFrag));
+
+    table.append(docFrag);
 }
 
-function addPersonToTable(person, position){
-    const table = document.getElementById("Contents");
-    const row = table.insertRow(position);
-    const name = row.insertCell(0);
-    const surname = row.insertCell(1);
-    const age = row.insertCell(2);
-    const profession = row.insertCell(3);
-    name.innerHTML = person.name;
-    surname.innerHTML = person.surname;
-    age.innerHTML = person.age;
-    profession.innerHTML = person.profession;
+function addPersonToTableFragment(person, frag) {
+    const row = document.createElement("tr");
+
+    for (const key in person) {
+        const col = document.createElement("td");
+        col.innerText = person[key];
+        row.append(col);
+    }
+
+    frag.append(row);
 }
