@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character Table</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js" defer></script>
 </head>
+
 <body>
     <h1>A table contaning character names age and profession</h1>
     <table style="width:100%;" id="Contents">
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Age</th>
-            <th>Profession</th>
+            <th>First Name <button type="button" onclick="sortElements(0)" class="btn" id="name-btn">=</button></th>
+            <th>Last Name <button type="button" onclick="sortElements(1)" class="btn" id="surname-btn">=</button></th>
+            <th>Age <button type="button" onclick="sortElements(2)" class="btn" id="age-btn">=</button></th>
+            <th>Profession <button type="button" onclick="sortElements(3)" class="btn" id="profession-btn">=</button></th>
         </tr>
     </table>
-
-    <script src="js/index.js"></script>
 </body>
+
 </html>

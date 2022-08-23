@@ -9,3 +9,15 @@ table, th, td{
 td{
     text-align: center;
 }
+
+.btn{
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 2rem;
+}
+
+.btn:hover{
+    background-color: royalblue;
+}
